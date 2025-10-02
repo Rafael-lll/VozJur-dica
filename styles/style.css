@@ -628,3 +628,27 @@ body > #cookie-notice-container.show {
     margin-right: auto;
 }
 
+/* ============================================= */
+/* ESTILOS PARA O LOGO NO CABEÇALHO        */
+/* ============================================= */
+
+/* Seleciona a imagem que está dentro do link com a classe .logo, 
+   que por sua vez está dentro do .main-header */
+.main-header .logo img {
+    /* Esta é a propriedade mais importante. Ajuste a altura como desejar. */
+    height: 45px;
+
+    /* A largura automática mantém a proporção da imagem, evitando distorções. */
+    width: auto;
+
+    /* Remove um pequeno espaço extra que os navegadores às vezes adicionam abaixo das imagens. */
+    display: block;
+    
+    /* Um pequeno efeito de transição para o hover */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito sutil para quando o usuário passar o mouse sobre o logo */
+.main-header .logo:hover img {
+    transform: scale(1.05);
+}
