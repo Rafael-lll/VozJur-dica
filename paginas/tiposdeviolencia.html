@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0MJZR9N5Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N0MJZR9N5Q');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entenda a Violência - Vozes Em Rede</title>
+    
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    
+
+    <button id="quick-exit" class="quick-exit-button">SAIR RÁPIDO (ESC)</button>
+
+    <header class="main-header">
+        <nav>
+            <a href="../index.html" class="logo">Acolhe Boituva</a>
+        </nav>
+    </header>
+
+    <main class="content-page">
+        <section id="ciclo-da-violencia" class="content-section">
+            <h2>O Ciclo da Violência</h2>
+            <div class="cycle-container">
+                <div class="cycle-phase">
+                    <h4>Fase 1: Aumento da Tensão</h4>
+                    <p>O agressor se torna irritado e tenso. A vítima sente que precisa "pisar em ovos" para evitar uma explosão.</p>
+                </div>
+                <div class="cycle-arrow">&rarr;</div>
+                <div class="cycle-phase">
+                    <h4>Fase 2: Explosão</h4>
+                    <p>A tensão acumulada leva a um ato de violência, que pode ser físico, psicológico, sexual, etc.</p>
+                </div>
+                <div class="cycle-arrow">&rarr;</div>
+                <div class="cycle-phase">
+                    <h4>Fase 3: Lua de Mel</h4>
+                    <p>O agressor se arrepende, pede perdão, promete mudar e se torna carinhoso, confundindo a vítima.</p>
+                </div>
+            </div>
+             <p class="cycle-explanation">Após a "lua de mel", a tensão volta a crescer e o ciclo recomeça, muitas vezes de forma mais rápida e grave. Quebrar este ciclo é fundamental.</p>
+        </section>
+
+        <section id="sinais-de-alerta" class="content-section">
+            <h2>Sinais de Alerta (Bandeiras Vermelhas)</h2>
+            <ul class="red-flags-list">
+                <li><strong>Ciúme excessivo:</strong> Ele usa o ciúme como desculpa para controlar suas roupas, amizades e redes sociais.</li>
+                <li><strong>Isolamento:</strong> Ele te afasta de amigos e familiares, pessoas que poderiam te apoiar.</li>
+                <li><strong>Críticas constantes:</strong> Ele te diminui e ataca sua autoestima, criticando sua aparência, inteligência ou opiniões.</li>
+                <li><strong>Controle:</strong> Ele quer saber onde você está e com quem fala o tempo todo, invadindo sua privacidade.</li>
+                <li><strong>Explosões de raiva:</strong> Ele tem mudanças de humor repentinas e assustadoras por motivos pequenos.</li>
+                <li><strong>Culpabilização:</strong> Ele te culpa pela raiva e pelo comportamento agressivo dele ("Você me provocou").</li>
+            </ul>
+        </section>
+
+        <section id="mitos-e-verdades" class="content-section">
+            <h2>Mitos e Verdades</h2>
+            <div class="myth-block">
+                <p class="myth"><strong>MITO:</strong> "Em briga de marido e mulher, ninguém mete a colher."</p>
+                <p class="truth"><strong>VERDADE:</strong> Violência doméstica é crime. A omissão pode custar uma vida. Denunciar é um ato de cidadania. Disque 180.</p>
+            </div>
+            <div class="myth-block">
+                <p class="myth"><strong>MITO:</strong> "Ela gosta de apanhar, senão já teria ido embora."</p>
+                <p class="truth"><strong>VERDADE:</strong> Ninguém gosta de sofrer violência. Medo, dependência financeira, filhos e manipulação psicológica são fatores que tornam a saída extremamente difícil e perigosa.</p>
+            </div>
+            <div class="myth-block">
+                <p class="myth"><strong>MITO:</strong> "Isso só acontece em famílias pobres."</p>
+                <p class="truth"><strong>VERDADE:</strong> A violência doméstica ocorre em todas as classes sociais, níveis de escolaridade e etnias. É um problema estrutural da nossa sociedade.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Acolhe Boituva - Gustavo Danton - Todos os direitos reservados. Um projeto comunitário e independente.</p>
+    </footer>
+
+    <script src="../scripts/scripts.js"></script>
+
+    <div id="cookie-notice-container">
+        <div class="cookie-notice-content">
+            <p>
+                Este site utiliza cookies para análise e melhoria da sua experiência. Ao continuar, você concorda com nossa 
+                <a href="/paginas/politica-de-privacidade.html">Política de Privacidade</a>.
+            </p>
+            <button id="cookie-notice-accept-btn">Entendi</button>
+        </div>
+    </div>
+
+    <script>
+        // --- LÓGICA DO BANNER DE COOKIES (AUTOCONTIDA) ---
+        // Espera o DOM estar pronto para garantir que todos os elementos existem
+        document.addEventListener('DOMContentLoaded', () => {
+            const bannerContainer = document.getElementById('cookie-notice-container');
+            const acceptButton = document.getElementById('cookie-notice-accept-btn');
+
+            // Garante que o código só rode se os elementos existirem
+            if (bannerContainer && acceptButton) {
+                // Verifica se o usuário já aceitou
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    // Se não, mostra o banner
+                    bannerContainer.classList.add('show');
+                }
+
+                // Adiciona o evento de clique ao botão
+                acceptButton.addEventListener('click', () => {
+                    // Salva a aceitação
+                    localStorage.setItem('cookiesAccepted', 'true');
+                    // Esconde o banner
+                    bannerContainer.classList.remove('show');
+                });
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

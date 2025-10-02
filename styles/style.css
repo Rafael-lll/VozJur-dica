@@ -1,0 +1,630 @@
+:root {
+    --primary-color: #ab90de;      
+    --secondary-color: #c4b4e0;  
+    --background-color: #1a1a2e;  
+    --card-background: #2c2c44;   
+    --text-color: #f0f0f5;       
+    --cta-color: #e63946;          
+    --white-color: #ffffff;       
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Lato', sans-serif;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Cabeçalho (Hero Section) */
+.hero {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content .subtitle {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.cta-button {
+    background-color: var(--cta-color);
+    color: var(--white-color);
+    padding: 15px 30px;
+    border-radius: 50px; /* Bordas bem arredondadas */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d62828; /* Vermelho mais escuro no hover */
+    transform: scale(1.05);
+}
+
+/* Seção de Posts Recentes */
+.recent-posts {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.recent-posts h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.posts-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+}
+
+.post-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    max-width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.post-card h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.post-card p {
+    margin-bottom: 20px;
+    color: #3c2d53;
+}
+
+.read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.site-footer {
+    background-color: #333;
+    color: var(--white-color);
+    text-align: center;
+    padding: 65px;
+    font-size: 0.9rem;
+}
+
+/* Botão de Saída Rápida */
+.quick-exit-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3c2d53;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000; /* Garante que fique acima de tudo */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .posts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* ============================================= */
+/* ESTILOS PARA A PÁGINA "ENTENDA A VIOLÊNCIA"    */
+/* ============================================= */
+
+/* Cabeçalho de Navegação Simples */
+.main-header {
+    background-color: var(--white-color);
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Estilos gerais da página de conteúdo */
+.content-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content-page h1 {
+    font-family: var(--font-primary);
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.page-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 60px;
+}
+
+.content-section {
+    margin-bottom: 60px;
+}
+
+.content-section h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para "Os 5 Tipos de Violência" */
+.violence-types-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.violence-type {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.violence-type h3 {
+    font-family: var(--font-primary);
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Estilos para "O Ciclo da Violência" */
+.cycle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.cycle-phase {
+    flex: 1;
+    background-color: #3c2d53;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid var(--secondary-color);
+}
+
+.cycle-arrow {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.cycle-explanation {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: #585858;
+}
+
+/* Estilos para "Sinais de Alerta" */
+.red-flags-list {
+    list-style: none; /* Remove a bolinha padrão */
+    padding-left: 0;
+}
+
+.red-flags-list li {
+    background-color: #fff0f1;
+    padding: 15px;
+    border-left: 5px solid var(--cta-color);
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Estilos para "Mitos e Verdades" */
+.myth-block {
+    margin-bottom: 25px;
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 20px;
+}
+
+.myth {
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.myth strong {
+    color: #d62828;
+}
+
+.truth {
+    font-weight: bold;
+    color: #006400; /* Verde escuro para a verdade */
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 768px) {
+    .content-page h1 {
+        font-size: 2.2rem;
+    }
+    
+    .violence-types-container {
+        grid-template-columns: 1fr; /* Coluna única em telas menores */
+    }
+
+    .cycle-container {
+        flex-direction: column; /* Empilha as fases na vertical */
+    }
+
+    .cycle-arrow {
+        transform: rotate(90deg); /* Gira a seta para baixo */
+        margin: 10px 0;
+    }
+}
+
+/* Remove a sombra dos cards e adiciona uma borda sutil */
+.post-card, .violence-type {
+    box-shadow: none; /* Remove a sombra que não aparece no escuro */
+    border: 1px solid #4a4a6a; /* Adiciona uma borda para delimitar */
+}
+
+/* Garante que o cabeçalho de navegação tenha o fundo correto */
+.main-header {
+    background-color: var(--card-background);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Ajusta as cores de "Mitos e Verdades" para melhor contraste */
+.myth-block {
+    border-left-color: var(--secondary-color);
+}
+
+.myth strong {
+    color: #ff8a80; /* Um tom de vermelho claro */
+}
+
+.truth {
+    color: #b9f6ca; /* Um tom de verde claro */
+    font-weight: bold;
+}
+
+/* Ajusta as "bandeiras vermelhas" */
+.red-flags-list li {
+    background-color: #3b1f2b;
+    border-left-color: var(--cta-color);
+}
+
+
+/* ============================================= */
+/* ESTILOS PARA A PÁGINA "BUSQUE AJUDA"      */
+/* ============================================= */
+
+/* Seção de Emergência com Destaque */
+.emergency-section {
+    background-color: #3b1f2b; /* Tom avermelhado escuro, alinhado ao tema */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    border: 2px solid var(--cta-color);
+}
+
+.emergency-section h2 {
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.contact-card.emergency .call-button {
+    display: block;
+    width: 100%;
+    background-color: var(--cta-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact-card.emergency .call-button:hover {
+    background-color: #ff6b6b;
+}
+
+/* Grid para os cartões de contato */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.contact-card {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #4a4a6a;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    flex-grow: 1; /* Faz a descrição ocupar o espaço, alinhando os botões embaixo */
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.contact-info span {
+    font-size: 1.5rem;
+}
+
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de Copiar Telefone */
+.copy-btn {
+    background-color: #4a4a6a;
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.disclaimer {
+    text-align: center;
+    margin-top: 60px;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+.main-header.sticky {
+    background-color: var(--card-background);
+    padding: 15px 5%; 
+    width: 100%;
+    position: sticky; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    border-bottom: 1px solid #4a4a6a;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+
+.nav-links .nav-cta {
+    background-color: var(--cta-color);
+    color: var(--white-color);
+    padding: 8px 15px;
+    border-radius: 50px;
+}
+
+.nav-links .nav-cta:hover {
+    color: var(--white-color);
+    filter: brightness(1.2); 
+}
+
+
+#cusdis_thread {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+      
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.site-content {
+    flex-grow: 1;
+}
+
+
+.content-page,
+.hero {
+    flex: 1; 
+}
+
+.container-largo {
+    max-width: 1100px; 
+}
+
+body > #cookie-notice-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Z-index muito alto para ficar na frente de tudo */
+    background-color: #121225; /* Um fundo escuro, mas não o mesmo do site */
+    border-top: 1px solid #4a4a6a;
+    color: #f0f0f5;
+    
+    /* Propriedades para a animação de "aparecer" */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Quando o banner tiver a classe .show, ele se torna visível e sobe para a posição correta. */
+body > #cookie-notice-container.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para o conteúdo interno do banner */
+.cookie-notice-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.cookie-notice-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.cookie-notice-content a {
+    color: #ab90de; /* Cor de destaque roxa */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.cookie-notice-content button {
+    background-color: #ab90de;
+    color: #121225;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.cookie-notice-content button:hover {
+    background-color: #c4b4e0;
+}
+
+/* Responsividade para o novo banner */
+@media (max-width: 768px) {
+    .cookie-notice-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.content-image {
+    margin: 30px 0; /* Espaçamento acima e abaixo da imagem */
+    text-align: center; /* Centraliza a imagem e a legenda */
+}
+
+.content-image img {
+    max-width: 100%; /* Garante que a imagem nunca ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra suave */
+}
+
+.content-image figcaption {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-top: 10px;
+}
+
+/* Para imagens que queremos que se estendam mais (se a .content-page for mais estreita) */
+.content-image.wide-image {
+    max-width: 100%; /* Permite que o contêiner da imagem use a largura máxima do main */
+    margin-left: auto;
+    margin-right: auto;
+}
+

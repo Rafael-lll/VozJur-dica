@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Acolhe Boituva</title>
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+
+    <button id="quick-exit" class="quick-exit-button">SAIR RÁPIDO (ESC)</button>
+
+    <header class="main-header">
+        <nav>
+            <a href="../index.html" class="logo">Acolhe Boituva</a>
+        </nav>
+    </header>
+
+    <main class="content-page site-content">
+        <h1>Política de Privacidade</h1>
+        <p class="page-intro">Última atualização: 30 de Setembro de 2025</p>
+
+        <section class="content-section">
+            <p>A sua privacidade é importante para nós. É política do projeto <strong>Voz Jurídica</strong> respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site.</p>
+
+            <h2>1. Coleta de Dados</h2>
+            <p>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</p>
+            <p>Os dados coletados se enquadram em duas categorias:</p>
+            <ul>
+                <li><strong>Dados de Navegação (Anônimos):</strong> Através do Google Analytics, coletamos dados anônimos sobre a sua visita, como quais páginas você acessou, por quanto tempo, sua localização geográfica aproximada (país/cidade), e informações técnicas sobre seu navegador e dispositivo. Estes dados são usados exclusivamente para fins estatísticos, para entendermos como nossos visitantes usam o site e como podemos melhorá-lo.</li>
+                <li><strong>Dados de Comentários:</strong> Ao deixar um comentário em nosso site (através do serviço Cusdia), podemos coletar o nome/apelido e o e-mail que você fornecer, bem como o seu endereço IP. Estes dados são necessários para a exibição e moderação dos comentários.</li>
+            </ul>
+
+            <h2>2. Uso de Cookies</h2>
+            <p>Nosso site utiliza "cookies". Um cookie é um pequeno arquivo de texto que um site armazena no seu computador ou dispositivo móvel quando você o visita. Eles são amplamente utilizados para fazer os sites funcionarem, ou funcionarem de forma mais eficiente, bem como para fornecer informações aos proprietários do site.</p>
+            <ul>
+                <li><strong>Cookies de Análise (Google Analytics):</strong> Usamos estes cookies para coletar informações sobre como os visitantes usam nosso site. Usamos as informações para compilar relatórios e nos ajudar a melhorar o site. Os cookies coletam informações de forma anônima.</li>
+                <li><strong>Cookies de Funcionalidade (Disqus):</strong> Se você deixar um comentário, o sistema Disqus pode usar cookies para lembrar seus detalhes para futuras interações.</li>
+            </ul>
+            <p>Você pode configurar seu navegador para recusar nossos cookies, mas esteja ciente de que talvez não possamos fornecer alguns dos serviços desejados.</p>
+
+            <h2>3. Links para Sites de Terceiros</h2>
+            <p>O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.</p>
+            <p>Recomendamos que leia as políticas de privacidade de nossos parceiros de serviço:</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank">Política de Privacidade do Google</a></li>
+                <li><a href="https://help.disqus.com/en/articles/1717103-disqus-privacy-policy" target="_blank">Política de Privacidade do Disqus</a></li>
+            </ul>
+
+            <h2>4. Seus Direitos (LGPD)</h2>
+            <p>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados. De acordo com a Lei Geral de Proteção de Dados, você tem o direito de acessar, corrigir e solicitar a exclusão de seus dados pessoais.</p>
+
+            <h2>5. Contato</h2>
+            <p>Se tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contato conosco através do e-mail: <strong>[gustavodanton@outlook.pt]</strong>.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Acolhe Boituva. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../scripts/scripts.js"></script>
+
+    <div id="cookie-notice-container">
+        <div class="cookie-notice-content">
+            <p>
+                Este site utiliza cookies para análise e melhoria da sua experiência. Ao continuar, você concorda com nossa 
+                <a href="/paginas/politica-de-privacidade.html">Política de Privacidade</a>.
+            </p>
+            <button id="cookie-notice-accept-btn">Entendi</button>
+        </div>
+    </div>
+
+    <script>
+        // --- LÓGICA DO BANNER DE COOKIES (AUTOCONTIDA) ---
+        // Espera o DOM estar pronto para garantir que todos os elementos existem
+        document.addEventListener('DOMContentLoaded', () => {
+            const bannerContainer = document.getElementById('cookie-notice-container');
+            const acceptButton = document.getElementById('cookie-notice-accept-btn');
+
+            // Garante que o código só rode se os elementos existirem
+            if (bannerContainer && acceptButton) {
+                // Verifica se o usuário já aceitou
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    // Se não, mostra o banner
+                    bannerContainer.classList.add('show');
+                }
+
+                // Adiciona o evento de clique ao botão
+                acceptButton.addEventListener('click', () => {
+                    // Salva a aceitação
+                    localStorage.setItem('cookiesAccepted', 'true');
+                    // Esconde o banner
+                    bannerContainer.classList.remove('show');
+                });
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

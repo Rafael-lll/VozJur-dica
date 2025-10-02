@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0MJZR9N5Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N0MJZR9N5Q');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vozes Em Rede - Você não está sozinha</title>
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="short icon" href="imagens/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+     <button id="quick-exit" class="quick-exit-button">SAIR RÁPIDO (ESC)</button>
+
+     <!--Navegação de Páginas-->
+    <header class="main-header sticky">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">Voz Jurídica</a>
+            <div class="nav-links">
+                <a href="paginas/projeto-pq.html">Porque do projeto</a>
+                <a href="paginas/ajuda.html" class="nav-cta">❤️ Busque Ajuda</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!--Corpo da Página -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Você não está sozinha.</h1>
+                <p class="subtitle">Um espaço seguro de acolhimento e informação para mulheres em Boituva.</p>
+                <a href="paginas/ajuda.html" class="cta-button">VER CONTATOS DE APOIO</a>
+            </div>
+        </section>
+        <section class="recent-posts">
+            <h2>Informação que Acolhe e Fortalece</h2>
+            
+            <div class="posts-container">
+                <article class="post-card">
+                    <h3>Os 5 Tipos de Violência Doméstica</h3>
+                    <p>A violência não é só física. Conheça as formas de abuso psicológico, moral, sexual e patrimonial para saber identificar os sinais.</p>
+                    <a href="paginas/ciclosdaviolencia.html#tipos-de-violencia" class="read-more">Leia mais &rarr;</a>
+                </article>
+
+                <article class="post-card">
+                    <h3>O Ciclo da Violência: Como Quebrar?</h3>
+                    <p>Entenda as fases da tensão, agressão e "lua de mel" que aprisionam muitas mulheres em relacionamentos abusivos e veja os caminhos para sair.</p>
+                    <a href="paginas/tiposdeviolencia.html#ciclo-da-violencia" class="read-more">Leia mais &rarr;</a>
+                </article>
+
+                <article class="post-card">
+                    <h3>Guia de Apoio em Boituva: Onde Ir?</h3>
+                    <p>Um guia completo com endereços e telefones da Delegacia da Mulher, CREAS, hospitais e outros serviços essenciais na nossa cidade.</p>
+                    <a href="paginas/ajuda.html" class="read-more">Leia mais &rarr;</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <!--Aviso de Cookies -->
+    <div id="cookie-notice-container">
+        <div class="cookie-notice-content">
+            <p>
+                Este site utiliza cookies para análise e melhoria da sua experiência. Ao continuar, você concorda com nossa 
+                <a href="/paginas/politica-de-privacidade.html">Política de Privacidade</a>.
+            </p>
+            <button id="cookie-notice-accept-btn">Entendi</button>
+        </div>
+    </div>
+
+    <script>
+        // --- LÓGICA DO BANNER DE COOKIES (AUTOCONTIDA) ---
+        // Espera o DOM estar pronto para garantir que todos os elementos existem
+        document.addEventListener('DOMContentLoaded', () => {
+            const bannerContainer = document.getElementById('cookie-notice-container');
+            const acceptButton = document.getElementById('cookie-notice-accept-btn');
+
+            // Garante que o código só rode se os elementos existirem
+            if (bannerContainer && acceptButton) {
+                // Verifica se o usuário já aceitou
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    // Se não, mostra o banner
+                    bannerContainer.classList.add('show');
+                }
+
+                // Adiciona o evento de clique ao botão
+                acceptButton.addEventListener('click', () => {
+                    // Salva a aceitação
+                    localStorage.setItem('cookiesAccepted', 'true');
+                    // Esconde o banner
+                    bannerContainer.classList.remove('show');
+                });
+            }
+        });
+    </script>
+    
+    </body>
+    
+    <!--RODAPÉ -->
+    <footer class="site-footer">
+        <p>&copy; 2025 Acolhe Boituva - Gustavo Danton - Todos os direitos reservados. Um projeto comunitário e independente. | <a href="paginas/politica-de-privacidade.html" >Política de Privacidade</p>
+    </footer>
+    
+    <script src="scripts/scripts.js"></script>
+
+</html>

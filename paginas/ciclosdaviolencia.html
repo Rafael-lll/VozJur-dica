@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0MJZR9N5Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N0MJZR9N5Q');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entenda a Violência - Vozes Em Rede</title>
+    
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <button id="quick-exit" class="quick-exit-button">SAIR RÁPIDO (ESC)</button>
+
+    <header class="main-header">
+        <nav>
+            <a href="../index.html" class="logo">Acolhe Boituva</a>
+        </nav>
+    </header>
+
+    <main class="content-page">
+        <h1>Informação que Liberta: Entenda a Violência</h1>
+        <p class="page-intro">Conhecer as diferentes formas de abuso, seus padrões e os sinais de alerta é o primeiro e mais poderoso passo para quebrar o ciclo da violência. Estamos aqui para te guiar neste conhecimento.</p>
+
+        <section id="tipos-de-violencia" class="content-section">
+            <h2>Os 5 Tipos de Violência da Lei Maria da Penha</h2>
+            <div class="violence-types-container">
+                <div class="violence-type">
+                    <h3>1. Violência Física</h3>
+                    <p>Qualquer ato que prejudique a integridade ou saúde corporal. Inclui empurrar, bater, chutar, queimar ou qualquer forma de agressão física.</p>
+                </div>
+                <div class="violence-type">
+                    <h3>2. Violência Psicológica</h3>
+                    <p>Ações que causam dano emocional e diminuem a autoestima. Inclui ameaças, humilhações, manipulação, isolamento e perseguição constante (stalking).</p>
+                </div>
+                <div class="violence-type">
+                    <h3>3. Violência Sexual</h3>
+                    <p>Qualquer ato sexual não consentido. Inclui forçar o sexo, impedir o uso de contraceptivos ou obrigar a participar de atos sexuais indesejados.</p>
+                </div>
+                <div class="violence-type">
+                    <h3>4. Violência Patrimonial</h3>
+                    <p>Controle ou destruição dos seus bens e recursos financeiros. Inclui reter dinheiro, destruir documentos, quebrar objetos e controlar seu salário.</p>
+                </div>
+                <div class="violence-type">
+                    <h3>5. Violência Moral</h3>
+                    <p>Ações que mancham sua reputação. Inclui espalhar mentiras (difamação), fazer acusações falsas (calúnia) ou ofender sua dignidade (injúria).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Acolhe Boituva - Gustavo Danton - Todos os direitos reservados. Um projeto comunitário e independente.</p>
+    </footer>
+
+    <script src="../scripts/scripts.js"></script>
+
+    <div id="cookie-notice-container">
+        <div class="cookie-notice-content">
+            <p>
+                Este site utiliza cookies para análise e melhoria da sua experiência. Ao continuar, você concorda com nossa 
+                <a href="/paginas/politica-de-privacidade.html">Política de Privacidade</a>.
+            </p>
+            <button id="cookie-notice-accept-btn">Entendi</button>
+        </div>
+    </div>
+
+    <script>
+        // --- LÓGICA DO BANNER DE COOKIES (AUTOCONTIDA) ---
+        // Espera o DOM estar pronto para garantir que todos os elementos existem
+        document.addEventListener('DOMContentLoaded', () => {
+            const bannerContainer = document.getElementById('cookie-notice-container');
+            const acceptButton = document.getElementById('cookie-notice-accept-btn');
+
+            // Garante que o código só rode se os elementos existirem
+            if (bannerContainer && acceptButton) {
+                // Verifica se o usuário já aceitou
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    // Se não, mostra o banner
+                    bannerContainer.classList.add('show');
+                }
+
+                // Adiciona o evento de clique ao botão
+                acceptButton.addEventListener('click', () => {
+                    // Salva a aceitação
+                    localStorage.setItem('cookiesAccepted', 'true');
+                    // Esconde o banner
+                    bannerContainer.classList.remove('show');
+                });
+            }
+        });
+    </script>
+    
+
+</body>
+</html>
